@@ -165,7 +165,7 @@
     </div>
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-4">Pipeline Description</h2>
+        <h2 class="title is-3">Pipeline Description</h2>
 
         <!-- Interpolating. -->
         <h3 class="title is-4">Task Setting</h3>
@@ -191,7 +191,7 @@
         <h3 class="title is-4">Video Generation and Perception</h3>
         <div class="content has-text-justified">
           <p>
-            we render the initial scene by ray-tracing to obtain the following observations: 
+            We render the initial scene by ray-tracing to obtain the following observations: 
             a photorealistic image, ground-truth depth map ,
             and segmentation mask, we then utilized a LLM rewrite task description and the initial 
             image to condition an image-to-video model to generate a video.
@@ -205,7 +205,7 @@
         <h3 class="title is-4">Supervision</h3>
         <div class="content has-text-justified">
           <p>
-            we extract supervisory signals from the generated video to guide training. These signals include:
+            We extract supervisory signals from the generated video to guide training. These signals include:
             2D Mask of the Actuator; 2D Mask of the Target Object; 3D Point Cloud of the Actuator; 3D Point Cloud of the Target Object;
             Contact Information; Affordance.
 
@@ -215,7 +215,7 @@
         <h3 class="title is-4">Trajectory Optimization</h3>
         <div class="content has-text-justified">
           <p>
-            we optimize the motion trajectory of the actuator directly in the simulator, 
+            We optimize the motion trajectory of the actuator directly in the simulator, 
             abstracting the action sequence into a series of waypoints based on the frequency of selected keyframes. 
             We initialize the action sequence using the actuator's estimated poses from these keyframes and employ 
             a sample-based optimization method, CMA-ES, to refine the trajectory for task completion.
@@ -226,11 +226,66 @@
 
       </div>
     </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experimental Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            Here we show our qualitative and quantitative experimental results.
+          </p>
+        </div>
 
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Qualitative Results</h3>
+        <div class="content has-text-justified">
+          <p>
+            The picture below shows the results of our proposed LuciBot methods. 
+            Our methods can successfully complete all proposed tasks, demonstrating 
+            its strong capability. 
+          </p>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="publication-image">
+              <img src="./static/images/video_results.png" alt="Tasks Image" style="max-width: 100%; height: auto;">
+            </div>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Quantitative Results</h3>
+        <div class="content has-text-justified">
+          <p>
+            Our method significantly outperforms all baselines across tasks, 
+            as the goal imagined by the video generation model provides 
+            a more direct and accurate supervision signal.
+    
+          </p>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="publication-image">
+              <img src="./static/images/quant_results1.png" alt="Tasks Image" style="max-width: 100%; height: auto;">
+            </div>
+          </div>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="publication-image">
+              <img src="./static/images/quant_results2.png" alt="Tasks Image" style="max-width: 100%; height: auto;">
+            </div>
+          </div>
+        </div>
+        <br/>
+
+
+      </div>
+    </div>
+  
   </div>
 </section>
-
-
 
 <footer class="footer">
   <div class="container">
