@@ -234,10 +234,10 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths has-text-centered">
-        <h2 class="title is-3">Experimental Results</h2>
+        <h2 class="title is-3">Qualitative Results</h2>
         <div class="content">
           <p>
-            Here we show our qualitative and quantitative experimental results.
+            Here we show the demo videos of our LuciBot method.
           </p>
         </div>
       </div>
@@ -245,26 +245,151 @@
     
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h3 class="title is-4">Qualitative Results</h3>
+        <h3 class="title is-4">Generated reference video</h3>
         <div class="content">
           <p>
-            The picture below shows the results of our proposed LuciBot methods. 
-            Our methods can successfully complete all proposed tasks, demonstrating 
-            its strong capability. 
+            LuciBot utilizes a general-purpose video generation model to generate reference videos that 
+            conform to semantics and extracts rich supervisory signals from them to facilitate complex 
+            embodied tasks. Here, we show the generated videos, including deformable tasks, articulated tasks, and rigid tasks.
           </p>
         </div>
-    
         <div class="columns is-centered">
-          <div class="column is-full-width">
-            <div class="publication-image">
-              <img src="./static/images/video_results_new.png" alt="Tasks Image" style="max-width: 100%; height: auto;">
-            </div>
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/ref_dough.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/ref_butter.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/reference_video_mochi.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
-        <br/>
+        <div class="columns is-centered">
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/reference_video_sand.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/reference_video_hammer.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/reference_video_liquid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/ref_cup.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/reference_video_drawer.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/ref_cabinet.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/reference_video_rubber.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <h3 class="title is-4">Optimized Trajectory Videos</h3>
         <div class="content">
           <p>
-            By obtaining the 6 dofs signals, we can enable robots to manipulate the actuators.
+            We extract supervisory signals from the generated video then optimize the motion trajectory of the actuator directly in the simulator.
+            Here wwe demonstrate the optimized trajectory videos of the actuators.
+          </p>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/act_dough.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/act_butter.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/act_mochi.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/act_sand.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/act_hammer.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/act_water.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/act_cup.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/act_rubber.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <h3 class="title is-4">Robotics Results</h3>
+        <div class="content">
+          <p>
+            By obtaining the 6 dofs signals, we sample grasping poses based on grasping affordance and employ inverse kinimatics 
+            and path-planning algorithms to control the robot arm to grasp the actuator and follow this trajectory.
+            We show the demo video of robots manipulation as follows.
           </p>
         </div>
         <div class="columns is-centered">
@@ -314,9 +439,29 @@
               Your browser does not support the video tag.
             </video>
           </div>
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/rubber.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/rubber.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-one-third has-text-centered">
+            <video width="100%" controls>
+              <source src="./static/videos/rubber.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
     
-        <h3 class="title is-4">Quantitative Results</h3>
+        <!-- <h3 class="title is-4">Optimized Trajectory Videos</h3>
         <div class="content">
           <p>
             Our method significantly outperforms all baselines across tasks, 
@@ -340,7 +485,7 @@
             </div>
           </div>
         </div>
-        <br/>
+        <br/> -->
     
       </div>
     </div>
