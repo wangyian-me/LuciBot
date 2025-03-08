@@ -188,7 +188,7 @@
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Video Generation and Perception</h3>
+        <h3 class="title is-4">Video Generation and Selection</h3>
         <div class="content has-text-justified">
           <p>
             We render the initial scene by ray-tracing to obtain the following observations: 
@@ -202,19 +202,24 @@
           </p>
         </div>
 
-        <h3 class="title is-4">Supervision</h3>
+        <h3 class="title is-4">Perception</h3>
+        <div class="content has-text-justified">
+          <p>
+            Using previous procedure, we generate some candidate videos per task and select the highest-scoring video as the guidance video.
+            we then apply a video segmentation model (SAM2) to track foreground objects.
+            Next, we apply a depth inpainting model (DepthLab) to estimate per-frame depth maps.
+            To estimate foreground object poses, we use their 2D segmentation and depth information.
+            Finally, we sample keyframes at a certain frequency.
+
+          </p>
+        </div>
+
+        <h3 class="title is-4">Policy Learning</h3>
         <div class="content has-text-justified">
           <p>
             We extract supervisory signals from the generated video to guide training. These signals include:
             2D Mask of the Actuator; 2D Mask of the Target Object; 3D Point Cloud of the Actuator; 3D Point Cloud of the Target Object;
             Contact Information; Affordance.
-
-          </p>
-        </div>
-
-        <h3 class="title is-4">Trajectory Optimization</h3>
-        <div class="content has-text-justified">
-          <p>
             We optimize the motion trajectory of the actuator directly in the simulator, 
             abstracting the action sequence into a series of waypoints based on the frequency of selected keyframes. 
             We initialize the action sequence using the actuator's estimated poses from these keyframes and employ 
